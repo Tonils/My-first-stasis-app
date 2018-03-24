@@ -1,0 +1,9 @@
+Manual Demo of ARI
+SCREEN3: (asterisk console)
+SCREEN1: wscat -c "ws://localhost:8088/ari/events?api_key=ariuser:4DxHiaSO8R7gOChn8o9E&app=hello-world"
+PHONE: Dial 1000
+SCREEN1: find callid - say EEEEEEEEE.I
+SCREEN2: curl -v -u ariuser:4DxHiaSO8R7gOChn8o9E -X POST "http://localhost:8088/ari/channels/EEEEEEEEE.I/play?media=sound:hello-world"
+PHONE: monkeys
+PHONE: Hangup
+SCREEN1: feedback, note the socket stays connected for the next caller...
